@@ -1,0 +1,89 @@
+body{
+	font-size: 18px;
+}
+
+@font-face {
+	font-family: 'iconitos';
+	src:url('../fonts/icomoon.eot?-f5ow28');
+	src:url('../fonts/icomoon.eot?#iefix-f5ow28') format('embedded-opentype'),
+		url('../fonts/icomoon.woff?-f5ow28') format('woff'),
+		url('../fonts/icomoon.ttf?-f5ow28') format('truetype'),
+		url('../fonts/icomoon.svg?-f5ow28#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+textarea{
+	width: 100%;
+	height: 150px;
+}
+.centro{
+	width: 80%;
+	margin: 0 auto;
+}
+a{
+	color: black;
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: none;
+}
+
+footer{
+	background: #337ab7;
+	height: 100px
+	color: white;
+}
+
+
+.form{
+	background: #CADDCF;
+	color red;
+}
+
+
+.manualU{
+
+	display: none;
+}
+.manualT{
+
+	display: none;
+}
+.icono{
+
+	font-family: 'iconitos';
+	font-size: 80px;
+}
+
+.clic:hover{
+	color: #337ab7;
+	cursor: pointer;
+}
+.modificar:before {
+	content: "\e905";
+}
+
+.consultar:before {
+	content: "\e926";
+}
+
+.eliminar:before {
+	content: "\ea0f";
+}
+
+.alta:before {
+	content: "\ea10";
+}
+
+.formulario{
+	background: #CADDCF;
+}
+
+#formAdd{
+	display: none;
+}
+
+#menuAdd{
+
+	display: none;
+}

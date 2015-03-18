@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/menu.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="js/baseDatos.js"></script>
+	<title>Menu de aplicacion</title>
+</head>
+<body class="container">
+	
+		
+		<header class="row">
+			<div class="col-md-6">
+				<a href="inicio.html">
+				<img src="img/logoInegi.jpg" class="img-responsive">
+				</a>
+			</div>
+
+			<div class="col-md-6">
+				<h1 class="text-right">Menu de aplicación</h1>
+			</div>
+		</header>
+		
+		<div class="row text-center">
+			<h2 class="col-md-12">Seleccione una opción</h2>
+		</div>
+		
+		<br>
+
+		<section class="row">
+			
+			<div class="col-md-3 text-center clic" id="agregar">
+			
+					<span class="alta icono"></span>
+					<p>Agregar parche</p>
+			
+			</div>
+
+			<div class="col-md-3 text-center clic">
+				
+					<span class="modificar icono"></span>
+					<p>Modificar  nombre de parche</p>
+			</div>
+
+			<div class="col-md-3 text-center clic">
+				
+					<span class="consultar icono"></span>
+					<p>Consultar tabla de parches</p>
+				
+			</div>
+
+			<div class="col-md-3 text-center clic">
+				
+					<span class="eliminar icono"></span>
+					<p>Eliminar Parche</p>
+				
+			
+
+
+
+			</div>
+
+			<br>
+			<br>
+
+			<!-- Formulario que aparecera cuando se de clic en la opcion agregar -->
+			<article>
+
+
+			<article id="formAdd">
+
+
+
+			<div class="row text-center">
+				<h3 class="col-md-12">LLene todos los campos para agregar un registro a la base de datos</h3>
+			</div>
+			<div class="row">
+				<div class="col-md-3 text-right">
+						<label>Ingrese nombre del Parche</label>
+				</div>
+
+				<div class="col-md-9">
+					<form>
+						<input type="text" id="actua" placeholder="KB00134" class="form-control" />
+						<br>
+				</div>
+
+						<div class="col-md-3 text-right">
+								<label>Sistema operativo</label>
+						</div>
+
+						<div class="col-xs-12 col-md-9">
+
+							<select>
+								<option value = "1">Windows 7 32 bits</option>
+								<option value = "1">Windows 7 64 bits</option>
+								<option value = "1">Windows 8 32 bits</option>
+								<option value = "1">Windows 8 64 bits</option>
+							</select>
+						</div>
+						<br><br><br><br><br>
+						</div>
+							<div class="col-md-3 text-right">
+								<label>Fecha de Aviso</label>
+							</div>
+
+						<div class="col-xs-12 col-md-9">
+
+
+						<input type="date" class="form-control">
+						</div>
+						<br><br><br>
+
+
+						<div class="col-md-3 text-right">
+								<label>Descripción</label>
+							</div>
+
+						<div class="col-xs-12 col-md-9">
+
+
+							<textarea maxlength="500">
+							</textarea>
+							<br>
+							<button type="submit" class="btn btn-primary form-control">Agregar</button>
+						</div>
+						
+
+
+
+
+					</form>
+
+			</div>
+
+			</article>
+
+
+
+		
+		</section>
+
+ <br><br><br><br>
+<!-- 
+
+
+
+<footer class="row">
+	<div class="col-md-12">
+		<p class="text-center">TecLine 2015</p>
+	</div>
+
+</footer>
+
+
+
+-->
+
+
+
+
+<script type="text/javascript">
+	$('#agregar').click( function(){
+		$('#formAdd').fadeToggle(600);
+		$('#formAdd').css("display", "block");
+
+
+
+	});
+	
+</script>
+
+</body>
+</html>

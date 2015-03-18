@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Lectura de archivos</title>
+	<script type="text/javascript" src="js/archivo.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+</head>
+<body class="container">
+	<script type="text/javascript">
+		soporteFile();
+	</script>
+
+		
+
+
+		<header class="row">
+			<div class="col-md-6">
+				<a href="inicio.html">
+				<img src="img/logoInegi.jpg" class="img-responsive">
+				</a>
+			</div>
+
+			<div class="col-md-6">
+				<h1 class="text-right">Parches VS equipos</h1>
+			</div>
+		</header>
+
+
+
+	
+
+	<table id="miyazaki">
+		<caption>Actualizaciones Windows</caption>
+		<thead>
+			<tr>
+				<th id="1">KB2761451</th>
+				<th>KB2727528</th>
+				<th>KB2761226</th>
+				<th>KB2761465</th>
+
+			</tr>
+		</thead>
+	<tbody>
+		<tr>
+			<td id="celda"> RCSOFI034928D </th>
+			<td> RCSOFI034928D </th>
+			<td> RCSOFI034928D </th>
+		</tr>
+		<tr>
+			<td> RCSOFI034928D </th>
+			<td> RCSOFI034928D </th>
+			<td> RCSOFI034928D </th>
+		<tr>
+			<td> RCSOFI034928D </th>
+			<td> RCSOFI034928D </th>
+			<td> RCSOFI034928D </th>
+		</tr>
+		<tr>
+			<td> RCSOFI034928D </th>
+			<td> RCSOFI034928D </th>
+			<td> RCSOFI034928D </th>
+		</tr>
+	</tbody>
+		</table>
+
+	<script type="text/javascript">
+		imprimir();
+	</script>
+	
+
+	<input id="fileInput" type="file" size="50" onchange="processFiles(this.files)">
+	
+	<div id="fileOutput">
+		<h2>Nombre de el fichero</h2>
+	</div>
+	<script>
+			var headertext = [];
+			var headers = document.querySelectorAll("#miyazaki th"),
+			tablerows = document.querySelectorAll("#miyazaki th"),
+			tablebody = document.querySelector("#miyazaki tbody");
+			for(var i = 0; i < headers.length; i++) {
+			var current = headers[i];
+			headertext.push( current.textContent.replace( /\r?\n|\r/,"") );
+			}
+			for (var i = 0, row; row = tablebody.rows[i]; i++) {
+			for (var j = 0, col; col = row.cells[j]; j++) {
+			col.setAttribute("data-th", headertext[j]);
+			} }
+	</script>
+</body>
+</html>
+
+<!-- REQUERIMIENTOS
+
+	1)CARGAR ARCHIVO
+	2)LEER EL NOMBRE DEL ARCHIVO (NOMBRE DEL EQUIPO)
+	3)LEER LA COLUMNA DE HOTFIXES
+	4)CREAR TABLAS DE HOTFIXES
+	5)DENTRO DE LAS TABLAS VAN A IR LOS EQUIPOS QUE YA TENGAN INSTALADOS ESOS HOTFIXES
+
+	-->

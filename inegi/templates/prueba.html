@@ -1,0 +1,85 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Prueba</title>
+</head>
+<body>
+	<style type="text/css">
+	pre.sintaxis{
+		background: #DADADA;
+	}
+
+	pre.syntaxbox, pre.twopartsyntaxbox, pre[class*=language-] {
+background: url(/media/redesign/img/blueprint-dark.png) top center #fafbfc;
+border-left: 6px solid #558abb;
+color: #4d4e53;
+-moz-tab-size: 4;
+tab-size: 4;
+-moz-hyphens: none;
+-webkit-hyphens: none;
+-ms-hyphens: none;
+hyphens: none;
+}
+
+pre {
+font-size: 14px;
+font-size: 1rem;
+line-height: 19px;
+border: 0;
+background: #f4f7f8;
+color: #4d4e53;
+padding: 15px;
+overflow: auto;
+margin: 0 0 20px;
+}
+
+code, pre {
+font-family: Consolas,Monaco,'Andale Mono',monospace;
+}
+
+pre.syntaxbox, pre.twopartsyntaxbox, pre[class*=language-] {
+background: url(/media/redesign/img/blueprint-dark.png) top center #fafbfc;
+border-left: 6px solid #558abb;
+color: #4d4e53;
+-moz-tab-size: 4;
+tab-size: 4;
+-moz-hyphens: none;
+-webkit-hyphens: none;
+-ms-hyphens: none;
+hyphens: none;
+}
+
+	</style>
+	<pre class="sintaxis">
+		<code>
+
+function Hotfixreport 
+{ 
+	$computadoras = Get-Content C:\computadoras.txt 
+	$filename = "$env:D:\update\$computadora.txt"  
+	$ErrorActionPreference = 'Stop'   
+		ForEach ($computadora in $computadoras) {  
+ 
+  			try  
+    		{ 
+ 				(get-hotfix -cn $computadora | format-list HotfixID, installedOn | out-file "D:\wParches\$computadora.txt" ) 
+ 			} 
+
+ 			catch{ 
+				#Add-content $computadora -path "$env:USERPROFILE\Desktop\Notreachable_Servers.txt"
+			}  
+	}
+ 
+} 
+ii $filename
+Hotfixreport >> "$env:D:\win\$computadora.txt"
+
+
+
+
+		</code>		
+
+
+	</pre>
+</body>
+</html>

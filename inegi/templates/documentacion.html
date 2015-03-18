@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/menu.css" />
+	<link rel="stylesheet" type="text/css" href="css/fuente.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+	<title>Documentación INEGI APP</title>
+</head>
+<body class="container">
+	<header class="row">
+			<div class="col-md-6">
+				<a href="inicio.html">
+
+				<img src="img/logoInegi.jpg" class="img-responsive">
+				</a>
+			</div>
+
+			<div class="col-md-6">
+				<h1 class="text-right">DOCUMENTACIÓN</h1>
+			</div>
+		</header>
+
+		<h2 class="text-center">Seleccione una opción</h2>
+
+		<section class="row">
+				<div class="col-xs-12 col-md-12 text-center">
+
+				<button id="usuario" class="btn btn-primary centro">Manual de usuario</button>
+
+				</div>
+				<br><br>
+				<article class="row manualU" id="manualUsuario">
+					<iframe class="centro"src="docs/prueba.pdf" style="width:100%; height:500px;" frameborder="0">
+					</iframe>
+				</article>
+				<div class="col-xs-12 col-md-12 text-center">
+				<button id="tec" class="btn btn-primary centro">Manual Técnico</button>
+
+				</div>
+				<br><br>
+				<article class="row manualT" id="manual2">
+					
+					<iframe class="centro"src="docs/prueba.pdf" style="width:100%; height:500px;" frameborder="0">
+					</iframe>				
+				
+				</article>
+		
+
+		</section>
+
+
+
+	<script type="text/javascript">
+		$('#usuario').click( function(){
+			$('#manualUsuario').fadeToggle(600);
+			$('#manualUsuario').css("display", "block");
+
+
+
+		});
+
+			$('#tec').click( function(){
+			$('#manual2').fadeToggle(600);
+			$('#manual2').css("display", "block")
+
+
+
+
+		});
+
+	</script>
+
+</body>
+</html>
