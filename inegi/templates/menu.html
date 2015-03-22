@@ -1,12 +1,12 @@
 <!DOCTYPE html>
+{% load staticfiles %}
 <html lang="es">
 <head>
 	<meta charset="utf-8" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/menu.css" />
+	<link rel="stylesheet" type="text/css" href={% static "css/menu.css" %}/>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
-	<script type="text/javascript" src="js/baseDatos.js"></script>
+	<script type="text/javascript" src={% static "js/jquery-1.11.2.min.js" %}></script>
 	<title>Menu de aplicacion</title>
 </head>
 <body class="container">
@@ -14,8 +14,8 @@
 		
 		<header class="row">
 			<div class="col-md-6">
-				<a href="inicio.html">
-				<img src="img/logoInegi.jpg" class="img-responsive">
+				<a href="/">
+				<img src={% static "img/logoInegi.jpg" %} class="img-responsive">
 				</a>
 			</div>
 
@@ -34,28 +34,28 @@
 			
 			<div class="col-md-3 text-center clic" id="agregar">
 			
-					<span class="alta icono"></span>
+					<span class="config parches"></span>
 					<p>Agregar parche</p>
 			
 			</div>
 
 			<div class="col-md-3 text-center clic">
 				
-					<span class="modificar icono"></span>
-					<p>Modificar  nombre de parche</p>
+					<span class="config parches"></span>
+					<p>Consulta Parches</p>
 			</div>
 
 			<div class="col-md-3 text-center clic">
 				
-					<span class="consultar icono"></span>
-					<p>Consultar tabla de parches</p>
+					<span class="config equipo"></span>
+					<p>Agregar Equipo</p>
 				
 			</div>
 
 			<div class="col-md-3 text-center clic">
 				
-					<span class="eliminar icono"></span>
-					<p>Eliminar Parche</p>
+					<span class="config consultaE"></span>
+					<p>Consulta Equipos</p>
 				
 			
 
